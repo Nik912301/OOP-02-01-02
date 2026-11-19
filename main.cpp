@@ -21,6 +21,24 @@ public:
     ~Point() { cout << "Destructor Point" << endl; }
 };
 
+class Point3d : public Point {
+protected:
+    int z;
+    std::vector<int> p;
+public:
+    Point3d() : Point(), z(0) { cout << "Point3d(" << z << ")" << endl; }
+    Point3d(int x, int y, int zIn) : Point(x, y), z(zIn) { cout << "Point3d(" << x << ", " << y << ", " << z << ")" << endl; }
+    Point3d(const Point3d& other) : Point(other), z(other.z) { cout << "Point3d(Point3d(" << x << ", " << y << ", " << z << "))" << endl; }
+
+    int getZ() { return z; }
+    void print() {
+        Point::print();
+        cout << " " << z;
+    }
+
+    ~Point3d() { cout << "Destructor Point3d" << endl; }
+};
+
 int main() {
     return 0;
 }
