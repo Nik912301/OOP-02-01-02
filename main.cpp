@@ -62,28 +62,32 @@ public:
     }
 };
 
+
 int main() {
-    cout << "--------------" << endl;
-    Point3d p1(1, 2, 3);
-    cout << "coordinate: ";
-    p1.print();
-    cout << endl << endl;
+    cout << "--------------" << endl << endl;
+    {
+        Point3d p1(1, 2, 3);
+        cout << "coordinate: ";
+        p1.print();
+        cout << endl << endl;
+    }
 
-    cout << "--------------" << endl;
-    Sphere s1(5, 5, 5, 10);
-    s1.print();
-    cout << endl;
-
-    cout << "--------------" << endl;
+    cout << "--------------" << endl << endl;
+    {
+        Sphere s1(5, 5, 5, 10);
+        s1.print();
+        cout << endl;
+    }
+    cout << "--------------" << endl << endl;
     Sphere s2(10, 11, 12, 20);
     s2.print();
     cout << endl;
 
-    cout << "--------------" << endl;
+    cout << "--------------" << endl << endl;
     Sphere s3 = s2;
     s3.print();
     cout << endl;
 
-    cout << "--------------" << endl;
+    cout << "--------------" << endl << endl;
     return 0;
 }
