@@ -39,6 +39,29 @@ public:
     ~Point3d() { cout << "Destructor Point3d" << endl; }
 };
 
+class Sphere {
+protected:
+    Point3d center;
+    int radius;
+public:
+    Sphere() : center(0, 0, 0), radius(1) {
+        cout << "Sphere()" << endl;
+    }
+
+    Sphere(int x, int y, int z, int r) : center(x, y, z), radius(r) {
+        cout << "Sphere(" << x << ", " << y << ", " << z << ", " << r << ")" << endl;
+    }
+
+    void print() {
+        cout << "Sphere Center: "; center.print();
+        cout << ", Radius: " << radius << endl;
+    }
+
+    ~Sphere() {
+        cout << "Destructor Sphere" << endl;
+    }
+};
+
 int main() {
     return 0;
 }
