@@ -79,5 +79,11 @@ int main() {
     s2.print();
     cout << endl;
 
+    cout << "--------------" << endl;
+    Sphere s3 = s2;
+    s3.print();
+    cout << endl;
+
+    cout << "--------------" << endl;
     return 0;
 }
